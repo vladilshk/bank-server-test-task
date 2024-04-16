@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+
+  postgres:
+    image: postgres:latest
+    environment:
+      - POSTGRES_PASSWORD=postgres
+    expose:
+      - 5432
+    ports:
+      - published: 5438
+        target: 5432
